@@ -3,3 +3,4 @@
 const billValue = 40;
 
 const calculateBill = billValue >= 50 && billValue <= 300 ? billValue *= 1.15: billValue *= 1.2
+console.log(calculateBill);
