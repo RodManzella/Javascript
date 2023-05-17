@@ -403,7 +403,43 @@ statement!  --> does not produce a value (ends with ;)
 =======================================================================================================
 The Conditional(Ternary) operator: allows us to write something similar to if/else but inside one single line
 
-const age 
+const age = 23;
+
+age >= 18 ? console.log('I link to drink wine') : console.log('I link to drink water');
+
+same thing as:
+if(age >= 18){
+    console.log('I link to drink wine')
+}
+else{
+    console.log('I link to drink water')
+}
+--------------------------------------------------------------------------------------------
+const drink = age >= 18 ? 'Wine' : 'Water';
+
+- if the age >= 18, drink = Wine. Else, drink = water
+
+console.log(drink)  --> Wine
+
+- without the ternary operator, we would have to use an if else statement.
+- we would also have to declare the variable as let, outside the code block.
+
+let drink2;
+
+if(age >= 18){
+    drink2 = 'wine';
+}
+else{
+    drink2 = 'water';
+}
+
+console.log(drink2)  --> wine
+-----------------------------------------------------------------------------------------------
+
+console.log(`I like to drink ${age >= 18 ? 'Wine' : 'Water'}`);
+
+-----------------------------------------------------------------------------------------------
+
 
 
 
