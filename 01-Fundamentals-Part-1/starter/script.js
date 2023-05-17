@@ -439,20 +439,14 @@ console.log(drink2)  --> wine
 console.log(`I like to drink ${age >= 18 ? 'Wine' : 'Water'}`);
 
 -----------------------------------------------------------------------------------------------
+Challenge! Ternary Operator:
 
+// if value is between 50 and 300 (tip 15%). Else tip is 20%
 
+const billValue = 40;
+const calculateTip = billValue >= 50 && billValue <= 300 ? billValue *= 0.15: billValue *= 0.2
 
-
-
-
-
- 
-
-
-
-
-
-
-
+console.log(`The bill was ${bill}, the tip was ${tip},
+ and the total value ${bill + tip}`);
 
 */
