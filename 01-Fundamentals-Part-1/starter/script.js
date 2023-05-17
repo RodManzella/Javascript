@@ -356,6 +356,55 @@ if(hasDriversLicense && hasGoodVision && !isTired){
 }
 ================================================================================
 
+Switch statement: alternative way of writing a complicated if/else statement when all you
+                  want to do is compare a single value to multiple options.
+
+const day = 'monday';
+
+switch(day){
+    case 'monday':   // day === 'monday'
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log(Write code examples);
+    case 'friday':
+        console.log('Record videos')
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend :D');
+        break;
+    default:
+        console.log('Not a valid day!')
+ 
+}
+- without a break statement, the code will continue executing until it finds the next break.
+
+==================================================================================================
+expressions produce a value!
+
+3 + 4 --> expression
+
+1991 --> expression
+
+true && false && !false --> expression
+
+
+if(23 > 10){
+    const str = '23 is bigger'
+}
+
+statement!  --> does not produce a value (ends with ;)
+=======================================================================================================
+The Conditional(Ternary) operator: allows us to write something similar to if/else but inside one single line
+
+const age 
+
 
 
 
