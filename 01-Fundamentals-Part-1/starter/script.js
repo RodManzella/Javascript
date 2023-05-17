@@ -165,4 +165,96 @@ if(birthYear <= 200){
 }else{
     let century = 21;
 }
+===================================================================================
+Type Conversion and Coercion
+
+- Convertion: when you manually convert from one type to another
+
+- Coercion: when js automatically converts types behind the scenes for us.
+
+---------------------------------------------------------------------------------------------
+TYPE CONVERTION
+
+const inputYear = '1991';
+console.log(inputYear + 18);    --> 199118 (concatenate to string)
+
+- How to convert, so we can do this addition?
+const inputYear = '1991';
+console.log(Number(inputYear) + 18); --> will print the sum.
+console.log(inputYear + 18);   --> The result is still a string(variable inputYear is still a string)
+
+// console.log(Number('Jonas'));  --> NaN (Not a Number)
+
+console.log(String(23));  --> converts 23 to string
+
+- We rarelly have do convert values manually because JS automatically does this for us
+----------------------------------------------------------------------------------------------------
+TYPE COERCION
+
+console.log('I am' + 23 + ' Years old');  --> JS converts the 23 to String
+
+console.log ('23' - '10' - 3);  --> minus operator triggers the opposite conversion (10)
+
+console.log('23' * '2');  --> 46
+
+console.log('23' / '2');  --> 11.5
+
+
+let n = '1' + 1;  --> 11 (string concatenation)
+n = n - 1  --> minus signal triggers opposite convertion, n is now a number (11-1 = 10)
+console.log(n);  --> 10
+
+
+2 + 3 + 4 + '5' = '95'    why???
+2 + 3 + 4 = 9, now we do a concatenation with '5', and the number becomes a string -> '95'
+
+
+'10' - '4' - '3' - 2 + '5'
+It doesn´t make sense to subtract two strings, so it gets converted to a number
+'10' - '4' - '3' - 2 = 1 (Type Number)
+1 + '5' = '15' (Type String)
+======================================================================================================
+Truthy and Falsy values
+
+- Falsy values are values that are not exactly false,
+ but will become false when we try to convert them into
+ a boolean.
+
+ - 5 falsy values: 0, '', undefined, null, NaN
+
+
+ - Everything else are so called truthy values.
+
+----------------------------------------------------------
+ console.log(Boolean(0));       --> false
+ console.log(Boolean(undefined));  --> false
+ console.log(Boolean('Jonas'));  --> true
+ console.log(Boolean({}));  --> true
+
+ const money = 0;
+
+ if(money){  --> 0 is a falsy value, and in the context of if/else it gets converted to false
+    console.log("Don´t spend it at all");
+ }else{
+    console.log("You should get a job")
+ }
+
+ - if money was any other value, it would be a truthy value, and get converted to true
+-----------------------------------------------------------------
+
+ let height;  --> height is a falsy value(undefined), in if/else it will be converted to false
+
+ if(height){
+    console.log('Yay! Height is defined')
+ }else{
+    console.log('Height is undefined')
+ }
+
+
+
+
+
+
+
+
 */
