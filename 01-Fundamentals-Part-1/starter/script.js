@@ -448,5 +448,4 @@ const calculateTip = billValue >= 50 && billValue <= 300 ? billValue *= 0.15: bi
 
 console.log(`The bill was ${bill}, the tip was ${tip},
  and the total value ${bill + tip}`);
-
 */
