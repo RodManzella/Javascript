@@ -40,3 +40,11 @@ ES2021 --> future
 - ESNext: Future versions of the language
 - Can already use some features in production with transpilling and polyfilling
 ======================================================================================
+3 Reasons why we should not forget the old Javascript:
+
+- You will better understand how Javascript works
+
+- Many tutorials and code you find today are still in ES5
+
+- When working on old codebases, these will be written in ES5
+=======================================================================================
