@@ -250,6 +250,119 @@ Truthy and Falsy values
     console.log('Height is undefined')
  }
 
+ ===============================================================
+ Equality Operators: ==  vs ===
+
+ const age = 18;
+
+ if(age === 18) console.log(You just became an adult!)
+--------------------------------------------------------------------
+ - Difference(=== / ==):
+
+ ===: Does not perform type coercion (Strict equality operator)
+ example: 18 == '18'(false)
+
+ ==: Perfoms type coercion (Loose equality operator) 
+ example: '18' == 18 (true)
+
+ avoid to use the loose equality operator
+
+ const age = '18'
+
+ if( age === 18){
+    console.log('(strict)')   --> does not get printed
+ }
+
+  if( age == 18){
+    console.log('(loose)')  --> gets printed
+ }
+ ----------------------------------------------------------------------
+ - getting the value from any webpage (prompt function):
+ - prompt function always returns a string.
+
+ const number = prompt("What´s your favorite number?")  --> 23
+ console.log(favorite)
+ console.log(typeof favorite)  --> String
+
+
+ if(favorite == 23){ // '23' == 23
+    console.log('Cool! 23 is an amazing number!')  --> gets printed
+ }
+
+ if(favorite === 23){ // '23' == 23
+    console.log('Cool! 23 is an amazing number!')  --> does not get printed
+ }
+---------------------------------------------------------------------------
+ -let´s convert the string to a number:
+
+ const number = Number(prompt("What´s your favorite number?"))
+
+ if(favorite == 23){ // 23 == 23
+    console.log('Cool! 23 is an amazing number!')  --> gets printed
+ }
+
+ if(favorite === 23){ // 23 == 23
+    console.log('Cool! 23 is an amazing number!')  --> gets printed
+ }
+ ---------------------------------------------------------------------------
+More conditions!
+
+if(favorite === 23){ 
+    console.log('Cool! 23 is an amazing number!')
+}
+else if(favorite === 7){
+    console.log('7 is also a cool number')
+}
+else if(favorite === 9)
+    console.log('9 is also a cool number')
+}
+else{
+    console.log('Number is not 23 or 7')
+}
+
+-Different operator
+
+if(favorite !== 23){  --> Strict
+    console.log('Why not 23?')
+}
+
+!= (loose) 
+=======================================================================
+
+LOGICAL OPERATORS (&&, ||, !)
+
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision);  --> true
+console.log(hasDriversLicense || hasGoodVision);  --> true
+console.log(!hasDriversLicense);  --> false
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+if(shouldDrive){
+    console.log('Sarah is able to drive!')
+}else{
+    console.log('Someone else should drive...')  --> is printed out
+}
+
+const isTired = false;
+console.log(hasDriversLicense && hasGoodVision && isTired)  --> returns false
+------------------------------------------------------------------------------
+if(hasDriversLicense && hasGoodVision && !isTired){
+    console.log('Sarah is able to drive!')
+}else{
+    console.log('Someone else should drive...') 
+}
+================================================================================
+
+
+
+
+
+
+ 
+
 
 
 
