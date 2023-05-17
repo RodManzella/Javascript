@@ -1,0 +1,7 @@
+7 Primitive Data Types:
+
+    Number, String, Boolean, Undefined, Null, Symbol(ES2015), BigInt(ES2020)
+
+
+- JavaScript has dynamic typing
+
