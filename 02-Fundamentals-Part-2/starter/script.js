@@ -120,6 +120,9 @@ const yearsUntilRetirement = (birthYea, firstName) =>{
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 
+- Arrow functions doest not get a this keyword.
+===========================================================================
+
 
 
 
