@@ -350,6 +350,27 @@ if(jonas[interestedIn]){
     console.log('Wrong request!')
 }
 ------------------------------------------------------------------------------------------------------
+Let´s see how we can add elements to objects using both dot and bracket notation:
+
+jonas.location = 'Portugal';
+jonas['twitter'] = @jonasschmedtman;
+
+how the object will be now:
+
+const jonas = {
+    firstname: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'Teacher',
+    friends: ['Michael', 'Peter', Steven]
+    location: "Portugal",
+    twitter: @jonasschmedtman
+ };
+ ----------------------------------------------------------------------------------------------------------
+ // Challenge
+ // Print: Jonas has 3 friends, and his best friend is called "Michael" (get info from object).
+
+
 
 
  */
