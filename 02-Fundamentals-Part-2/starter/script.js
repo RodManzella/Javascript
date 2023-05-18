@@ -38,6 +38,8 @@ function logger(){
     console.log('My name is Jonas')
 }
 
+- this function doesn´t return anything, so we don´t assign it to a variable.
+
 logger();                     --> will call function (print: ''My name is Jonas)
 
 ---------------------------------------------------------------------------------
@@ -55,6 +57,7 @@ console.log(appleJuice);                   --> Juice with 5 apples and 0 oranges
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);              --> Juice with 2 apples and 4 oranges.
+======================================================================================
 
 
 
