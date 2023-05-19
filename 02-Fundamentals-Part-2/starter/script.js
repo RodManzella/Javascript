@@ -370,7 +370,262 @@ const jonas = {
  // Challenge
  // Print: Jonas has 3 friends, and his best friend is called "Michael" (get info from object).
 
+ console.log(`${jonas.firstName} has ${jonas.friends.length}
+  and his best friend is called${jonas.friends[0]}`);
+  ==========================================================================================================
+
+  Object Methods
+
+  - Objects can hold different types of data.
+  - we can create a key value pair, in which a value is a function.
+
+  const jonas = {
+    firstname: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear:1991,
+    job: 'Teacher',
+    friends: ['Michael', 'Peter', Steven]
+    hasDriversLicense: true,
+
+    //calcAge: function(birthYear){
+    //  return 2037 - birthYear;
+    //}
+
+    calcAge: function(){
+        return 2037 - this.birthYear    --> this keyword: refers to the object 'jonas'
+    }
+ };
+
+ console.log(jonas.calcAge());  ---> 46
+
+ // console.log(jonas['calcAge']());
+
+ ----------------------------------------------------------------------------------
+ - we can create a new property with the function calle 'age' for future use.
+ - this way, we only need to calculate the age once, and store it inside tje object.
+...
+ calcAge: function(){
+    this.age = 2037 - this.birthYear
+    return;
+ }
+};
+
+console.log(jonas.age);
+---------------------------------------------------------------------------------------
+// Challenge
+// "Jonas is a 46-year old teacher, and he has a drivers licence."
+
+
+const jonas = {
+    firstname: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear:1991,
+    job: 'Teacher',
+    friends: ['Michael', 'Peter', Steven]
+    hasDriversLicense: true,
+
+    //calcAge: function(birthYear){
+    //  return 2037 - birthYear;
+    //}
+
+    calcAge: function(){
+        return 2037 - this.birthYear    --> this keyword: refers to the object 'jonas'
+    }
+
+    getSummary: function(){
+        return `${this.firstname} is a ${this.calcAge()
+        -year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a': 'no'} driver´s license.}  `
+    }
+ };
+
+ console.log(jonas.getSummary();)  --> Jonas is a 46-year old teacher, and he has a driver´s license.
+
+ =========================================================================================
+ CODING CHALLANGE!
+
+ Let´s go back to Mark and John comparing their BMIs!
+ this time, let´s use objects to implement the calculations! Remember: BMI = mass / height * 2
+ (mass in kg and height in meter)
+
+ 1) For each of them, create an object with properties for their full name, mass, and height
+ (Mark Miller and John Smith)
+
+ 2) create a calcBMI method on each object to calculate the BMI (the same method on both objects).
+ Store the BMI value to a property, and also return it from the method.
+
+ 3) Log to th console who has a higher BMI, together with the full name and the respective BMI:
+ Example: "John´s BMI (23.8) is higher than Mark´s (23.9)!"
+
+ TEST DATA: Marks weights 78 kg and is 1.69m tall. John weights 92kg and is 1.95m tall.
+
+
+ const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    
+    calcBMI: function(){
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    },
+ };
+
+ const jonas ={
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function(){
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    },
+ };
+
+ mark.calcBMI();
+ jonas.calcBMI();
+
+ console.log(mark.bmi, jonas.bmi());
+===============================================================================
+
+Iteration: the for loop
+
+for(let rep = 1; rep <= 10; rep ++){
+    console.log(`Lifting weights repetition ${rep}`);
+}
+================================================================================
+
+Looping Arrays, Breaking and continuing
+
+const jonas = {
+    firstname: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'Teacher',
+    friends: ['Michael', 'Peter', Steven],
+    true
+ };
+
+ const types = [];
+
+ for(let i = 0; i<= jonas.length - 1 ; i++){
+    console.log(jonas[i], typeof jonas[i]);
+
+    //filling types array
+
+    //types[i] = typeof jonas[i];
+    types.push(typeof jonas[i]);
+ }
+ -------------------------------------------------------------------------------
+
+ const years =  [1991, 2007, 1969, 2020];
+ const ages =[]
+
+ for(let i = 0; i < years.length; i++){
+    ages.push(2037 - years[i])
+ }
+
+ console.log(ages) -->  [46, 30, 68, 17]
+
+ ----------------------------------------------------------------------------
+
+ // continue(skip current iteration) and break(terminate loop)
+
+ for(let i = 0; i<= jonas.length; i++){
+    if(typeof jonas[i] !== 'string') continue;
+    console.log(jonas[i], typeof jonas[i]);
+ }
+
+ for(let i = 0; i<= jonas.length; i++){
+    if(typeof jonas[i] == 'number') break;
+    console.log(jonas[i], typeof jonas[i]);
+ }
+
+ ================================================================================
+
+Looping backwards and Loops in loops
+
+const jonas = {
+    firstname: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'Teacher',
+    friends: ['Michael', 'Peter', Steven],
+    true
+ };
+
+ for(let i = jonas.length - 1; i >= 0; i--){
+    console.log(i, jonas[i]);
+ }
+
+ for(let exercise = 1; exercise <= 3; exercise++){
+    console.log(`---------- Starting exercise ${exercise}`);
+    for(let rep = 1; rep <= 5; rep++){
+        console.log(`Lifting weight repetition ${rep}`);
+    }
+ }
+
+ =================================================================================
+ The while loop
+
+ let rep = 1;
+
+ while(rep <= 10){
+    console.log(`Lifting weight repetition ${rep}`);
+    rep++;
+ }
+
+ let dice = Math.trunc(Math.random() * 6) + 1;
+ 
+ while(dice !== 6){
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+ }
+===========================================================================
+Coding Challenge #4
+
+Let´s improve Steven´s tip calculator even more, this time using loops!
+
+1) Create an array 'bills' containing all 10 test bill values
+
+2) Create empty arrays for the tips and the totals
+
+3) Use the calcTip function we wrote before to calculate tips and total values. Use a for loop!
+
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+
+HINT: Call calcTip in the loop and use the push method to add values to the tips and totals arrays
+
+4) BONUS: write a function 'calcAverage which takes an array called 'arr' as an argument. This function
+calculates the average of all numbers in the given array.
+  
+
+const calcTip = function(bill){
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+tips = []
+totals = []
+
+for(let i = 0; i < bills.length; i++){
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+
+const calcAverage = function(arr){
+    let sum = 0;
+
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
+
+*/
 
 
 
- */
