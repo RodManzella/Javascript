@@ -1,10 +1,12 @@
-console.log("I like piza");
-console.log("It´s really good");
+// const = variable that can´t be changed
 
-window.alert("I really love pizza!");
+const PI = 3.14159;
+let radius;
+let circumference;
 
-// This is a comment
+radius = window.prompt("Enter the radius of a circle");
+radius = Number(radius);
 
-/*
-This is a multiline comment
- */
+circumference = 2 * PI * radius;
+
+console.log("The circunference is:", circumference);
