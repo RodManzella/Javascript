@@ -1,10 +1,9 @@
-console.log("I like piza");
-console.log("It´s really good");
+let prices = [5, 10, 15, 20];
 
-window.alert("I really love pizza!");
+for (let i = 0; i < prices.length; i++) {
+  console.log(prices[i]);
+}
 
-// This is a comment
-
-/*
-This is a multiline comment
- */
+for (let price of prices) {
+  console.log(price);
+}
