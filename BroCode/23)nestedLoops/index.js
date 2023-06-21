@@ -1,10 +1,10 @@
-console.log("I like piza");
-console.log("It´s really good");
+let symbol = window.prompt("Enter a symbol to use");
+let rows = window.prompt("Enter # of rows");
+let columns = window.prompt("Enter # of colums");
 
-window.alert("I really love pizza!");
-
-// This is a comment
-
-/*
-This is a multiline comment
- */
+for (let i = 1; i <= rows; i++) {
+  for (let j = 1; j <= columns; j++) {
+    document.getElementById("myRectangle").innerHTML += symbol;
+  }
+  document.getElementById("myRectangle").innerHTML += "<br>";
+}
