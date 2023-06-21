@@ -1,10 +1,26 @@
-console.log("I like piza");
-console.log("It´s really good");
+let grade = "Pizza";
 
-window.alert("I really love pizza!");
+switch (grade) {
+  case "A":
+    console.log("You did great!");
+    break;
+  case "B":
+    console.log("You did good!");
+    break;
 
-// This is a comment
+  case "C":
+    console.log("You did okay!");
+    break;
 
-/*
-This is a multiline comment
- */
+  case "D":
+    console.log("You passed... barely!");
+    break;
+
+  case "F":
+    console.log("You failed!");
+    break;
+  default:
+    console.log(grade, "is not a letter grade!");
+}
+
+// também podemos usar condições nos cases
