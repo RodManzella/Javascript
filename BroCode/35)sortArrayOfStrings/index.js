@@ -1,10 +1,7 @@
-console.log("I like piza");
-console.log("It´s really good");
+let fruits = ["banana", "apple", "orange", "mango"];
 
-window.alert("I really love pizza!");
+fruits = fruits.sort().reverse();
 
-// This is a comment
-
-/*
-This is a multiline comment
- */
+for (let fruit of fruits) {
+  console.log(fruit);
+}
