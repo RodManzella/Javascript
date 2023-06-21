@@ -1,10 +1,7 @@
-console.log("I like piza");
-console.log("It´s really good");
+// method chaining = calling one method after another in one continuous line of code.
 
-window.alert("I really love pizza!");
+let userName = "bro";
 
-// This is a comment
+let letter = userName.charAt(0).toUpperCase();
 
-/*
-This is a multiline comment
- */
+console.log(letter);
