@@ -1,10 +1,22 @@
-console.log("I like piza");
-console.log("It´s really good");
+// useful string properties & methods.
 
-window.alert("I really love pizza!");
+let username = "Bro Code";
+let phoneNumber = "123-456-7890";
 
-// This is a comment
+//console.log(username.length);
 
-/*
-This is a multiline comment
- */
+//console.log(username.charAt(0));
+
+//console.log(username.indexOf("o"));
+
+//console.log(username.lastIndexOf("o"));
+
+//username = username.trim();
+
+//username = username.toUpperCase();
+
+//username = username.toLowerCase();
+
+phoneNumber = phoneNumber.replaceAll("-", "");
+
+console.log(phoneNumber);
