@@ -1,10 +1,10 @@
-console.log("I like piza");
-console.log("It´s really good");
+// array.reduce() = reduces an array to a single value
 
-window.alert("I really love pizza!");
+let prices = [5, 10, 15, 20, 25];
+let total = prices.reduce(checkOut);
 
-// This is a comment
+console.log(`The total is: $${total}`);
 
-/*
-This is a multiline comment
- */
+function checkOut(total, element) {
+  return total + element;
+}
