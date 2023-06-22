@@ -1,10 +1,16 @@
-console.log("I like piza");
-console.log("It´s really good");
+// callback = a function passed as an argument to another function
 
-window.alert("I really love pizza!");
+sum(2, 3, displayDOM); // third is a callback
 
-// This is a comment
+function sum(x, y, callback) {
+  let result = x + y;
+  callback(result); // callback to displayDOM function
+}
 
-/*
-This is a multiline comment
- */
+function displayConsole(output) {
+  console.log(output);
+}
+
+function displayDOM(output) {
+  document.getElementById("myLabel").innerHTML = output;
+}
