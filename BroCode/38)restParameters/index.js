@@ -1,10 +1,7 @@
-console.log("I like piza");
-console.log("It´s really good");
+// rest parameters =  represents an indefinite number of parameters (packs arguments into an array when you pass arguments to a function)
 
-window.alert("I really love pizza!");
-
-// This is a comment
-
-/*
-This is a multiline comment
- */
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 4;
+let e = 5;
