@@ -1,10 +1,21 @@
-console.log("I like piza");
-console.log("It´s really good");
+// array.map() =  executes a provided callback function once for each array element
+// AND creates a new array.
 
-window.alert("I really love pizza!");
+let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(square);
+let cubes = numbers.map(cube);
 
-// This is a comment
+squares.forEach(print);
+cubes.forEach(print);
 
-/*
-This is a multiline comment
- */
+function square(element) {
+  return Math.pow(element, 2);
+}
+
+function cube(element) {
+  return Math.pow(element, 3);
+}
+
+function print(element) {
+  console.log(element);
+}
