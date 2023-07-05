@@ -1,10 +1,14 @@
-console.log("I like piza");
-console.log("It´s really good");
+// closure = A function with preserved and private data.
+// Give you acess to an outer function´s scope from an inner function
 
-window.alert("I really love pizza!");
+document.getElementById("loginButton").onclick = login;
 
-// This is a comment
-
-/*
-This is a multiline comment
- */
+function login() {
+  let userName = "Bro";
+  let userInbox = 1;
+  function alertUser() {
+    alert(`${userName} you have ${userInbox} new messages!`);
+    userInbox = 0;
+  }
+  return alertUser;
+}
